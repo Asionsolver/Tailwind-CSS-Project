@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h3 {
+    @apply mb-8 text-4xl font-bold text-darkGrayBlue md:text-5xl;
+  }
+
+  h5 {
+    @apply mb-2 text-2xl font-bold text-darkGrayBlue;
+  }
+}
+
+body {
+  background-image: url("./images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto text-center px-10;
+}
+
+.section-content {
+  @apply max-w-3xl mx-auto leading-9 text-xl text-grayishBlue;
+}
+
+.items-flexbox {
+  @apply flex flex-col items-center;
+}
+
+.button-container {
+  @apply flex flex-col justify-center w-full text-white font-medium text-xl space-y-6  md:flex-row md:space-y-0 md:space-x-4;
+}
+
+.button {
+  @apply p-4 px-8  shadow-lg  rounded-full duration-200 hover:opacity-80;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url("./images/bg-header-mobile.png");
+  }
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(94%);
+  -webkit-filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(94%);
+}
