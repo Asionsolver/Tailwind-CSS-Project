@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@theme {
+  /* custom font */
+  --font-display: "Poppins", "sans-serif";
+
+  /* custom breakpoint */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 60rem;
+  --breakpoint-xl: 83.125rem;
+
+  /* custom color */
+  --color-primary: #24212b;
+  --color-secondary: #808080;
+  --color-tertiary: #f5f5f5;
+  --color-accent-default: #1cbccf;
+  --color-accent-secondary: #18abbc;
+  --color-accent-tertiary: #90c6cd;
+  --color-gray: #e8f8f1;
+
+  /* custom shadow */
+  --shadow-custom1: 0px 2px 40px 0px rgba(8, 70, 78, 0.08);
+  --shadow-custom2: 0px 0px 30px 0px rgba(8, 73, 81, 0.06);
+
+  /* custom backgroundImage */
+  --background-services: url("./assets/img/services/bg.svg");
+  --background-testimonials: url("./assets/img/testimonials/bg.svg");
+  --background-departments: url("./assets/img/departments/bg.svg");
+  --background-quoteLeft: url("./assets/icons/testimonials/quote-left.svg");
+  --background-quoteRight: url("./assets/icons/testimonials/quote-right.svg");
+}
+
+@layer base {
+  body {
+    @apply font-display text-secondary text-[1.0625rem] leading-8;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply leading-[120%] text-primary;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-8;
+  }
+  .h1 {
+    @apply text-[2.25rem] xl:text-[4rem] font-semibold;
+  }
+  .h2 {
+    @apply text-[1.875rem] xl:text-[2.75rem] font-semibold capitalize tracking-[.0275rem];
+  }
+  .h3 {
+    @apply text-[1.25rem] xl:text-[1.625rem] font-semibold;
+  }
+  .h4 {
+    @apply text-[1.25rem] xl:text-[1.625rem] font-semibold capitalize;
+  }
+  .btn {
+    @apply rounded-full uppercase  tracking-[.0638rem] flex items-center justify-center transition-all;
+  }
+  .btn-sm {
+    @apply h-14 px-10;
+  }
+  .btn-lg {
+    @apply h-16 px-[3.125rem];
+  }
+  .btn-accent {
+    @apply bg-accent-default text-white hover:bg-accent-secondary;
+  }
+  .btn-white {
+    @apply bg-white text-secondary hover:bg-white/90;
+  }
+  .btn-outline {
+    @apply bg-transparent border-2 border-accent-default text-secondary hover:bg-accent-default hover:border-transparent hover:text-white;
+  }
+  .input,
+  .select {
+    @apply w-full rounded-[.625rem] h-[4.125rem] outline-none border border-[#dbdfdf] text-secondary font-light placeholder:text-secondary;
+  }
+  .input {
+    @apply px-4;
+  }
+  .select {
+    @apply px-12 xl:py-[9.375rem];
+  }
+
+  /* Swiper bullets */
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    @apply bg-accent-default;
+  }
+
+  /* faq */
+  .faq__item.open .faq__answer {
+    @apply h-full;
+  }
+}

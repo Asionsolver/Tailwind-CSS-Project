@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css"
+    />
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="./swiper-bundle.min.css" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="py-8 lg:pt-6 lg-14">
+      <div
+        class="container mx-auto flex flex-col gap-y-4 lg:flex-row lg:justify-between lg:relative lg:gap-y-0"
+      >
+        <!-- Logo -->
+        <div class="flex justify-center lg:justify-normal">
+          <a href="#">
+            <img src="./assets/img/header/logo.svg" alt="header-logo" />
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+          <div
+            class="flex justify-center items-center gap-x-2 lg:justify-normal"
+          >
+            <i class="ri-map-pin-2-fill text-2xl text-accent-default"></i>
+            <div class="text-secondary">123, Arling, Miola, NY</div>
+          </div>
+          <div
+            class="flex justify-center items-center gap-x-2 lg:justify-normal"
+          >
+            <i class="ri-phone-fill text-2xl text-accent-default"></i>
+            <div class="text-secondary">(+880) 1724114339</div>
+          </div>
+          <!-- Btn -->
+          <button
+            class="btn btn-sm btn-outline w-[240px] mx-auto lg:w-auto lg:mx-0"
+          >
+            Book now
+          </button>
+          <!-- Mobile nav -->
+          <nav
+            class="mnav bg-white fixed w-[18.75rem] top-0 h-screen -left-[18.75rem] shadow-2xl transition-all duration-300 z-20 lg:hidden"
+          >
+            <!-- nav trigger btn -->
+            <div
+              class="mnav__close-btn bg-primary w-8 h-8 relative -right-full top-8 flex justify-center items-center rounded-tr-lg rounded-br-lg cursor-pointer transition-all"
+            >
+              <i
+                class="mnav__close-btn-icon ri-arrow-right-s-line text-2xl text-white"
+              ></i>
+            </div>
+
+            <!-- Logo, list, form -->
+            <div class="px-12 flex flex-col gap-y-12 h-full">
+              <a href="#"><img src="./assets/img/header/logo.svg" alt="" /></a>
+              <ul class="flex flex-col gap-y-5">
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent-default transition-all duration-300"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent-default transition-all duration-300"
+                    >Doctors</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent-default transition-all duration-300"
+                    >Department</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent-default transition-all duration-300"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-secondary hover:text-accent-default transition-all duration-300"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+
+              <!-- Form -->
+              <form class="relative gap-x-[.625rem]">
+                <label for="">
+                  <i class="ri-search-line text-2xl text-accent-default"></i>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  id="mnav-search-input"
+                  class="outline-none w-[10rem] border-b-2 focus:border-b-2 focus:border-accent-default placeholder:italic"
+                />
+              </form>
+            </div>
+          </nav>
+
+          <!-- Desktop Nav -->
+          <nav
+            class="bg-white absolute w-full left-0 -bottom-[4rem] shadow-custom1 h-16 rounded-[.625rem] hidden lg:flex lg:justify-between lg:items-center lg:px-[3.125rem]"
+          >
+            <ul class="flex gap-x-4">
+              <li>
+                <a
+                  href="#"
+                  class="border-r border-gray-200 pr-4 text-secondary hover:text-accent-default transition-all duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r border-gray-200 pr-4 text-secondary hover:text-accent-default transition-all duration-300"
+                  >Doctors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r border-gray-200 pr-4 text-secondary hover:text-accent-default transition-all duration-300"
+                  >Department</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="border-r border-gray-200 pr-4 text-secondary hover:text-accent-default transition-all duration-300"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-secondary hover:text-accent-default transition-all duration-300"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+            <!-- Form -->
+            <form class="relative flex gap-x-[.625rem]">
+              <label
+                class="flex justify-center items-center group"
+                for="search-input"
+              >
+                <i class="ri-search-line text-2xl text-accent-default"></i>
+              </label>
+              <input
+                type="text"
+                placeholder="Search..."
+                id="mnav-search-input"
+                class="outline-none w-[6.25rem] focus:w-[11.25rem] focus:border-b-2 focus:border-accent-default placeholder:italic placeholder:text-base transition-all duration-150"
+              />
+            </form>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- Hero start -->
+    <section class="hero bg-gray py-12 overflow-hidden xl:pt-12 xl:pb-0">
+      <div class="container mx-auto h-full">
+        <!-- text & img -->
+        <div
+          class="flex flex-col text-center items-center justify-between h-full xl:flex-row"
+        >
+          <div class="hero__text xl:w-[48%] xl:text-left">
+            <div
+              class="flex items-center bg-white py-[.625rem] px-[1.25rem] gap-x-2 mb-[1.625rem] rounded-full w-max mx-auto xl:mx-0"
+            >
+              <i class="ri-heart-pulse-line text-2xl text-accent-default"></i>
+              <div
+                class="uppercase text-base font-medium text-[#9ab4b7] tracking-[.14rem]"
+              >
+                Live your life
+              </div>
+            </div>
+            <h1 class="h1 mb-6 p-4 xl:p-0">We care about your health</h1>
+            <p class="mb-[2.625rem] md:max-w-xl">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit accusamus
+              praesentium, eligendi officiis hic in voluptatum necessitatibus
+              rerum architecto odio.
+            </p>
+            <button class="btn btn-lg btn-accent mx-auto xl:mx-0">
+              Contact us
+            </button>
+          </div>
+          <div class="hero__img hidden xl:flex max-w-[50.875rem] self-end">
+            <img src="./assets/img/hero/img.png" class="" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero end -->
+    <!-- Stats start -->
+    <section class="stats section">
+      <div class="container mx-auto">
+        <!-- Wrapper -->
+        <div class="flex flex-col xl:flex-row gap-y-6 justify-between">
+          <!-- Item -->
+          <div
+            class="stats__item flex-1 flex flex-col items-center xl:border-r xl:border-gray-200"
+          >
+            <div
+              class="text-4xl font-semibold text-accent-tertiary xl:text-[4rem] xl:mb-2"
+            >
+              +5120
+            </div>
+            <div>Happy Patients</div>
+          </div>
+          <!-- Item -->
+          <div
+            class="stats__item flex-1 flex flex-col items-center xl:border-r xl:border-gray-200"
+          >
+            <div
+              class="text-4xl font-semibold text-accent-tertiary xl:text-[4rem] xl:mb-2"
+            >
+              +5120
+            </div>
+            <div>Happy Patients</div>
+          </div>
+          <!-- Item -->
+          <div
+            class="stats__item flex-1 flex flex-col items-center xl:border-r xl:border-gray-200"
+          >
+            <div
+              class="text-4xl font-semibold text-accent-tertiary xl:text-[4rem] xl:mb-2"
+            >
+              +5120
+            </div>
+            <div>Happy Patients</div>
+          </div>
+          <!-- Item -->
+          <div class="stats__item flex-1 flex flex-col items-center">
+            <div
+              class="text-4xl font-semibold text-accent-tertiary xl:text-[4rem] xl:mb-2"
+            >
+              +5120
+            </div>
+            <div>Happy Patients</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Stats end -->
+
+    <!-- Services start -->
+    <section class="services">
+      <div
+        class="bg-[url(./assets/img/services/bg.svg)] -z-10 bg-cover bg-no-repeat max-w-[91.625rem] mx-4 rounded-[1.25rem] px-6 relative h-[23rem] flex items-center xl:mx-auto xl:pt-[4.375rem] xl:px-0 xl:items-start"
+      >
+        <div class="container mx-auto">
+          <div
+            class="services__top flex items-center flex-col xl:flex-row xl:mb-[3.75rem]"
+          >
+            <h2
+              class="h2 text-white flex-1 mb-4 text-center xl:mb-0 xl:text-left"
+            >
+              Our best services for your solution
+            </h2>
+            <p
+              class="text-white text-center flex-1 max-w-2xl xl:text-left xl:max-w-none"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              odit cum quaerat consequuntur, consequatur asperiores sed
+              pariatur, perspiciatis voluptas perferendis, magnam quas debitis
+              facilis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Temp div -->
+    <div class="h-[250rem]"></div>
+
+    <!-- Script -->
+    <!-- Main Script -->
+    <script src="./output.js"></script>
+
+    <!-- Swiper Script -->
+    <script src="./swiper-bundle.min.js"></script>
+
+    <!-- Scroll Reveal Script -->
+    <script src="./scrollreveal.min.js"></script>
+  </body>
+</html>
