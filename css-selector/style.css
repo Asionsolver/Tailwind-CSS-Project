@@ -1,7 +1,23 @@
+.body-items {
+  background-color: #292a2d;
+}
 div > p {
   color: red;
 }
 
 div ~ p {
   color: blue;
+}
+
+.container-heading {
+  font-size: 25px;
+}
+
+.container-heading .container-heading-text span {
+  color: #eb5757;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #424242;
+  border-radius: 5px;
 }
